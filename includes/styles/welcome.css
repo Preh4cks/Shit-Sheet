@@ -1,0 +1,13 @@
+h1 {
+    width: fit-content;
+    margin: 40vh auto 0px auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 64px;
+}
+
+p {
+    width: fit-content;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 12px auto;
+    font-size: 24px;
+}
