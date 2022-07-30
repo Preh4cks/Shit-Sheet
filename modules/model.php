@@ -3,15 +3,15 @@
 class Model {
     private $connection;
 
-	function __construct() { }
+	public function __construct() { }
 
     /* Connect to database */
-    function db_connect($hostname, $username, $password, $db_name) {
+    protected function db_connect($hostname, $username, $password, $db_name) {
         $this->$connection = new mysqli($hostname, $username, $password, $db_name) or die("Connect failed: %s\n". $this->$connection -> error);    
     }
 
     /* Get all Records */
-    function fetch_all($query) {
+    protected function fetch_all($query) {
         $data = array();
         $this->$connection;
         $result = $this->$connection->query($query);
@@ -24,28 +24,28 @@ class Model {
     }
 
     /* Get Single Record */
-    function fetch_record($query) {
+    protected function fetch_record($query) {
         $this->$connection;
         $result = $this->$connection->query($query);
         return mysqli_fetch_assoc($result);
     }
 
     /* Run Query but returns if query is successful or not */
-    function run_mysql_query($query) {
+    protected function run_mysql_query($query) {
         $this->$connection;
         $result = $this->$connection->query($query);
         return $this->$connection->insert_id;
     }
 
     /* Escape the string */
-    function escape_this_string($string) {
+    protected function escape_this_string($string) {
         $this->$connection;
         return $this->$connection->real_escape_string($string);
     }
 
     /* Disconnect to Database */
-    function __destruct() {
-        if($connection > 0) {
+    public function __destruct() {
+        if(isset($this->$connection)) {
             mysqli_close($this->$connection);
         }
     }
