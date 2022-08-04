@@ -14,10 +14,9 @@ class Routes {
         $is_controller_exists = false;
 
         $class = NULL;
-
         // Check for matching subdirectory and load the associated controller and model
         foreach($subdirectories as $subdirectory=>$string) {
-            if($route == $subdirectory) {
+            if($route == $subdirectory || $route == $subdirectory . '/') {
                 // Separate Controller to method name
                 $class = explode('/', $string);
                 $the_controller = ucfirst($class[0]) . 'Controller';
@@ -27,9 +26,15 @@ class Routes {
                 $is_controller_exists = true;
             }
         }
-        
+
         // If there is no Subdirectory Load Error Page
-        if($is_controller_exists == false) {
+        if(isset($route)) {
+			$my_subdirectories = explode('/', $route);
+		}
+		
+        if($my_subdirectories[1] == 'wp-admin' || $my_subdirectories[1] == 'wp-login.php') {
+			require_once get_parent_theme_file_path('/index.php');
+		} elseif($is_controller_exists == false) {
             require_once get_parent_theme_file_path('/controllers/error.controller.php');
             $error_controler = new ErrorController;
             $error_controler->index();
@@ -50,7 +55,8 @@ class Routes {
                 }
             } else {
                 $new_controller = new $the_controller;
-                $new_controller->index();
+                $new_controller->index(array());
+                
             }
 
             new $the_model;

@@ -19,9 +19,9 @@ class Controller {
 		$extension_name = $this->get_extension_name($file_name);
 		
 		if($extension_name == 'partials') {
-			$this->includeWithVariables($this->$root_dir . '/views/partials/' . $file_name, $my_variables);
+			$this->load_with_variables($this->$root_dir . '/partials/' . $file_name, $my_variables);
 		} elseif($extenstion_name = 'templates'){ 
-			$this->includeWithVariables($this->$root_dir . '/views/templates/' . $file_name, $my_variables);
+			$this->load_with_variables($this->$root_dir . '/templates/' . $file_name, $my_variables);
 		}
 	}
 
@@ -35,7 +35,7 @@ class Controller {
 	}
 	
 	/* Includes PHP file with variables */
-	private function includeWithVariables($filePath, $variables = array()) {
+	private function load_with_variables($filePath, $variables = array()) {
 		$output = NULL;
 		
 		// Change Directory
