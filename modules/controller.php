@@ -1,10 +1,10 @@
 <?php
 
 class Controller {
-	private $root_dir;
+	private static $root_dir;
 
-	public function __construct() { 
-		$this->$root_dir = get_template_directory(__DIR__);
+	public function __construct() {
+		self::$root_dir = get_template_directory(__DIR__);
 	}
 	
 	/* Get the Extension Name */
@@ -16,21 +16,21 @@ class Controller {
 
 	/* Load the Files */
 	protected function load($file_name, $my_variables = array()) {
-		$extension_name = $this->get_extension_name($file_name);
+		$extension_name = self::get_extension_name($file_name);
 		
 		if($extension_name == 'partials') {
-			$this->load_with_variables($this->$root_dir . '/partials/' . $file_name, $my_variables);
+			self::load_with_variables(self::$root_dir . '/partials/' . $file_name, $my_variables);
 		} elseif($extenstion_name = 'templates'){ 
-			$this->load_with_variables($this->$root_dir . '/templates/' . $file_name, $my_variables);
+			self::load_with_variables(self::$root_dir . '/templates/' . $file_name, $my_variables);
 		}
 	}
 
 	/* Import Libraries */
 	public function import($file_name) {
-		$extension_name = $this->get_extension_name($file_name);
+		$extension_name = self::get_extension_name($file_name);
 
 		if($extenstion_name = 'templates') {
-			include($this->$root_dir . '/modules/lib/' . $file_name);
+			include(self::$root_dir . '/modules/lib/' . $file_name);
 		}
 	}
 	
@@ -40,12 +40,12 @@ class Controller {
 		
 		// Change Directory
 		foreach($variables as $variable => $values) {
-			$include_types = array('styles', 'images', 'scripts');
+			$include_types = array('styles', 'scripts');
 			$array = array();
 
 			if(in_array($variable, $include_types)) {
 				foreach($values as $value) {
-					array_push($array, get_template_directory_uri() . '/includes/styles/' . $value);
+					array_push($array, get_template_directory_uri() . '/includes/' . $variable . '/' . $value);
 				}
 
 				$variables[$variable] = $array;
