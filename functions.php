@@ -1,5 +1,7 @@
 <?php
 
+$uses_template = false;
+
 /* Include the Controller */
 require_once get_parent_theme_file_path('/modules/controller.php');
 

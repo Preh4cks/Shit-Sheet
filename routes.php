@@ -8,6 +8,7 @@ require_once get_parent_theme_file_path('/modules/lib/dynamo_electric_machine.li
  * absence of method_name will set default as index */
 $route = array(
     '/' => 'welcome',
+    '/javascript' => 'cheatsheet',
 );
 
 /* Generate code can be customize for the generation
@@ -21,7 +22,7 @@ $route = array(
  * tcmsp - Thursty Cat Makes Sipping Noises
  * mct - Men Cut Twig
  * */
-$generate_code = 'Thursty Cat Makes Sipping Noises';
+$generate_code = 'tcsp';
 
 /* Automatically Generate Files 
  * TIP: Make Sure to turn this feature off when not developing

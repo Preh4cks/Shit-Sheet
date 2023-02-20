@@ -1,0 +1,71 @@
+/* PrismJS 1.29.0 https://prismjs.com/download.html#themes=prism&languages=clike+javascript */
+code[class*=language-],pre[class*=language-]{
+    color:var(--nyanza);
+    font-size:1em;
+    text-align:left;
+    white-space:pre;
+    word-spacing:normal;
+    word-break:normal;
+    word-wrap:normal;
+    line-height:1.5;
+    -moz-tab-size:4;
+    -o-tab-size:4;
+    tab-size:4;
+    -webkit-hyphens:none;
+    -moz-hyphens:none;
+    -ms-hyphens:none;
+    hyphens:none;
+}
+code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{
+    background-color: rgb(25, 117, 111);
+}
+code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{
+    background-color: rgb(25, 117, 111);
+}
+pre[class*=language-]{
+    overflow: auto;
+    padding: 25px 50px;
+}
+:not(pre)>code[class*=language-],pre[class*=language-]{
+    background: var(--ebony);
+}
+:not(pre)>code[class*=language-]{
+    border-radius:.3em;
+    white-space:normal
+}
+.token.cdata,.token.comment,.token.doctype,.token.prolog{
+    color:#868686
+}
+.token.punctuation{
+    color:gold
+}
+.token.namespace{
+    opacity:.7
+}
+.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{
+    color:rgb(255, 44, 160)
+}
+.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{
+    color:rgb(188, 255, 53)
+}
+.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{
+    color: rgb(77, 170, 241)
+}
+.token.atrule,.token.attr-value,.token.keyword{
+    color: rgb(0, 251, 255)
+}
+.token.class-name,.token.function{
+    color:#ff1947
+}
+.token.important,.token.regex,.token.variable{
+    color:#e90
+}
+.token.bold,.token.important{
+    font-weight:700
+}
+.token.italic{
+    font-style:italic
+}
+.token.entity{
+    cursor:help
+}

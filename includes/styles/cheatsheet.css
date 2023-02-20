@@ -1,0 +1,47 @@
+/* Hero Section */
+.hero {
+    width: 100%;
+    padding: 50px 0;
+}
+    .hero > a {
+        text-decoration: none;
+    }
+        .hero > a > h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            display: inline-block;
+            vertical-align: text-bottom;
+            color: var(--nyanza);
+        }
+        .hero > a > h1:hover {
+            text-decoration: underline;
+        }
+    .hero > img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        display: inline-block;
+    }
+    .hero > p {
+        width: 100%;
+        padding: 25px 50px;
+        background-color: var(--ebony);
+        color: var(--nyanza);
+    }
+
+/* Category Section */
+.category {
+    width: 100%;
+    padding: 50px 0;
+}
+    .category > h2 {
+        color: var(--nyanza);
+        font-size: 1.6rem;
+    }
+    .category > .item {
+        padding: 50px 0;
+    }
+        .category > .item > p {
+            color: var(--nyanza);
+            margin-bottom: 10px;
+        }

@@ -8,6 +8,10 @@
 <?php if(isset($title)) { ?>
     <title><?= $title ?></title>
 <?php } ?>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <?php if(isset($styles)) { ?>
     <!-- Linked Style Sheets -->
@@ -22,6 +26,13 @@
 <link rel="stylesheet" href='<?= $custom_css_cdn[$i]; ?>'> 
     <?php } ?>
 <?php } ?>
+
+<?php if(isset($scripts)) { ?>
+    <!-- Linked JavaScript -->
+    <?php for($i = 0; $i < count($scripts); $i++) { ?>
+<script src='<?= $scripts[$i]; ?>'> </script>
+    <?php } ?>
+<?php } ?>
 </head>
 <body>
- 
+    <div class="container">
