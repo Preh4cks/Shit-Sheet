@@ -1,3 +1,30 @@
+/* Global Styling */
+body {
+    background-color: var(--black);
+}
+
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
+
+mark {
+    background-color: transparent;
+    color: var(--tiffany-blue);
+}
+
+hr {
+    height: 10px;
+    /* background-color: yellow; */
+    border: none;
+}
+
+p > a {
+    text-decoration: none;
+    color: var(--tiffany-blue);
+    text-decoration: underline;
+}
+
 /* Hero Section */
 .hero {
     width: 100%;
@@ -39,9 +66,12 @@
         font-size: 1.6rem;
     }
     .category > .item {
-        padding: 50px 0;
+        padding: 30px 0;
     }
         .category > .item > p {
             color: var(--nyanza);
             margin-bottom: 10px;
         }
+            .category > .item > p > mark {
+                text-decoration: underline;
+            }

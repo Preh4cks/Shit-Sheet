@@ -9,7 +9,7 @@ class CheatsheetController extends Controller {
         $fields = array('fields' => $fields);
         $header_values = array(
             'title' => 'Home',
-            'styles' => array('global.css', 'prism.css', 'cheatsheet.css'),
+            'styles' => array('prism.css', 'cheatsheet.css'),
             'scripts' => array('prism.js'),
         );
 

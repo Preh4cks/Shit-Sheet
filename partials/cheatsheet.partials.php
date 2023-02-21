@@ -8,6 +8,7 @@
             <p><?= get_sub_field('description'); ?></p>
         </main>
 <?php   elseif(get_row_layout() == 'category_section'): ?>
+        <hr style="background-color: <?= get_field("theme_color"); ?>;">
         <div class="category">
             <h2><?= get_sub_field('title'); ?></h2>
 <?php       $items = get_sub_field('items');?>

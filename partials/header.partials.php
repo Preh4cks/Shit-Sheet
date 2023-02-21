@@ -19,6 +19,28 @@
 <link rel="stylesheet" href='<?= $styles[$i]; ?>'> 
     <?php } ?>
 <?php } ?>
+
+    <style>
+        /* Global Styling */
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            /* outline: 1px solid red; */
+            font-size: 21px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Global Variables */
+        :root {
+            /* Colors */
+            --black: #090909;
+            --ebony: #4B5043;
+            --cambridge-blue: #9BC4BC;
+            --nyanza: #D3FFE9;
+            --tiffany-blue: #8DDBE0;
+        }
+    </style>
     
 <?php if(isset($custom_css_cdn)) { ?>
     <!-- Custom CSS CDN -->
@@ -33,6 +55,7 @@
 <script src='<?= $scripts[$i]; ?>'> </script>
     <?php } ?>
 <?php } ?>
+
 </head>
 <body>
     <div class="container">
