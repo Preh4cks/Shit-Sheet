@@ -9,6 +9,7 @@ require_once get_parent_theme_file_path('/modules/lib/dynamo_electric_machine.li
 $route = array(
     '/' => 'welcome',
     '/javascript' => 'cheatsheet',
+    '/profile' => 'profile',
 );
 
 /* Generate code can be customize for the generation

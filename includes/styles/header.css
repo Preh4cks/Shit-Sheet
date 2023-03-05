@@ -1,0 +1,13 @@
+p, h1, h2, h3, h4, h5, h6, a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#stars {
+    position: fixed;
+    z-index: -1;
+    max-width: 1600px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-x: hidden;
+}

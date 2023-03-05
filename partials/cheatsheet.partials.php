@@ -8,11 +8,10 @@
             <p><?= get_sub_field('description'); ?></p>
         </main>
 <?php   elseif(get_row_layout() == 'category_section'): ?>
-        <hr style="background-color: <?= get_field("theme_color"); ?>;">
-        <div class="category">
-            <h2><?= get_sub_field('title'); ?></h2>
-<?php       $items = get_sub_field('items');?>
-<?php       foreach($items as $item): ?>
+        <hr style="background-color: <?= get_field("theme_color"); ?>;"/>
+        <div class="category" id="<?= get_sub_field('title'); ?>">
+            <h2><span style="color: <?= get_field("theme_color"); ?>;">//</span> <?= get_sub_field('title'); ?></h2>
+<?php       foreach(get_sub_field('items') as $item): ?>
             <div class="item">
                 <p><?= $item['description']; ?></p>
                 <pre><code class="language-javascript"><?= $item['code']; ?></code></pre>

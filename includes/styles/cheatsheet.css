@@ -14,8 +14,7 @@ mark {
 }
 
 hr {
-    height: 10px;
-    /* background-color: yellow; */
+    height: 8px;
     border: none;
 }
 
@@ -61,12 +60,15 @@ p > a {
     width: 100%;
     padding: 50px 0;
 }
-    .category > h2 {
-        color: var(--nyanza);
+    .category > h2 > span {
         font-size: 1.6rem;
     }
+        .category > h2 {
+            color: var(--nyanza);
+            font-size: 1.6rem;
+        }
     .category > .item {
-        padding: 30px 0;
+        padding: 40px 0;
     }
         .category > .item > p {
             color: var(--nyanza);
